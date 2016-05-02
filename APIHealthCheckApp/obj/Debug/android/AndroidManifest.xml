@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="APIHealthCheckApp.APIHealthCheckApp" android:versionCode="1" android:versionName="1.0">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="API HealthCheck" android:name="mono.android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="API HealthCheck" android:name="md5d1d1e69ffa636f32ed99afa359221fd6.Details_Activity" />
+    <activity android:icon="@drawable/icon" android:label="API HealthCheck" android:name="md5d1d1e69ffa636f32ed99afa359221fd6.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="API HealthCheck" android:name="md5d1d1e69ffa636f32ed99afa359221fd6.Personal_Activity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="APIHealthCheckApp.APIHealthCheckApp.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.APIHealthCheckApp.APIHealthCheckApp" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>
